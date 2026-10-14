@@ -32,7 +32,9 @@ from telegram.ext import (
 # ---------------------------------------------------------------------------
 # 1. SOZLAMALAR VA TOKEN
 # ---------------------------------------------------------------------------
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"
+import os
+
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
 DB_NAME = "maktab_topilmalar.db"
 
 logging.basicConfig(
