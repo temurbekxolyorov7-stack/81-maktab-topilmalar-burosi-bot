@@ -1,4 +1,21 @@
-"""
+import os
+from threading import Thread
+from flask import Flask
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot 24/7 ishlamoqda!"
+
+def run():
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.daemon = True
+    t.start()
 =============================================================================
 Samarqand shahar 81-maktab — "81-Maktab Topilmalar Burosi" Telegram Boti
 Texnologiyalar: Python 3.10+, python-telegram-bot (v20+), SQLite3
@@ -744,6 +761,6 @@ def main():
     print("==================================================================")
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
+    keep_alive()
     main()
