@@ -46,9 +46,9 @@ from telegram.ext import (
     filters,
 )
 
-# ---------------------------------------------------------------------------
+SS
 # 1. SOZLAMALAR VA TOKEN
-# ---------------------------------------------------------------------------
+
 import os
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
