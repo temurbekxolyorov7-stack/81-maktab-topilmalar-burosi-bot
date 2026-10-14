@@ -46,7 +46,7 @@ from telegram.ext import (
     filters,
 )
 
-SS
+
 # 1. SOZLAMALAR VA TOKEN
 
 import os
@@ -64,9 +64,8 @@ logger = logging.getLogger(__name__)
 PHOTO, TITLE, DESCRIPTION, LOCATION = range(4)
 
 
-# ---------------------------------------------------------------------------
 # 2. MA'LUMOTLAR BAZASI (SQLITE3)
-# ---------------------------------------------------------------------------
+
 def init_db():
     """Baza va jadvallarni avtomatik yaratish"""
     conn = sqlite3.connect(DB_NAME)
